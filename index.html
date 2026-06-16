@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AEC Adoption Path — study and preparation guide</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=IBM+Plex+Mono:wght@400;500;600&family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet">
+<style>
+:root{--paper:#f5efe4;--sheet:#fffdf8;--sheet2:#fbf6ec;--ink:#2a2520;--soft:#6e665c;--faint:#a59c8f;--line:#e6dcc9;--line2:#efe7d8;--accent:#a8492c;--accent2:#c4663f;--accent-tint:#f6e4da;--sage:#5d7a4e;--sage-tint:#e7eee0;--slate:#4a6b85;--slate-tint:#e6eef3;--amber:#b07835;--amber-tint:#f6e8d2;--shadow:0 10px 30px rgba(58,43,28,.08);--shadow-sm:0 2px 8px rgba(58,43,28,.05);--r:14px;--mono:'IBM Plex Mono',ui-monospace,Menlo,monospace;--serif:'Fraunces',Georgia,serif;--sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:15px;line-height:1.6;-webkit-font-smoothing:antialiased;background-image:radial-gradient(circle at 12% -5%,#fff8ee 0,rgba(255,248,238,0) 45%),radial-gradient(circle at 100% 0,#f3e7da 0,rgba(243,231,218,0) 38%)}
+.wrap{max-width:1080px;margin:0 auto;padding:26px 20px 120px}
+.eyebrow{font-family:var(--mono);font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);font-weight:500}
+h1{font-family:var(--serif);font-weight:600;font-size:2.5rem;line-height:1.04;letter-spacing:-.01em;margin:.5rem 0 .4rem}
+h2{font-family:var(--serif);font-weight:600;font-size:1.35rem;margin:0}
+h3{font-family:var(--serif);font-weight:600;font-size:1.02rem;margin:0 0 .2rem}
+a{color:var(--accent);font-weight:500;text-decoration:none;border-bottom:1px solid var(--accent-tint)}
+a:hover{border-bottom-color:var(--accent)}
+.small{font-size:.85rem;color:var(--soft)}.faint{color:var(--faint)}
+#sticky{position:fixed;top:0;left:0;right:0;z-index:60;background:rgba(255,253,248,.9);backdrop-filter:saturate(140%) blur(10px);border-bottom:1px solid var(--line);transform:translateY(-100%);transition:transform .3s;padding:9px 20px}
+#sticky.show{transform:translateY(0)}
+.sticky-in{max-width:1080px;margin:0 auto;display:flex;align-items:center;gap:14px}
+.sticky-in .label{font-family:var(--mono);font-size:.74rem;color:var(--soft);white-space:nowrap}
+.sticky-in .pct{font-family:var(--mono);font-weight:600;color:var(--accent);font-size:.9rem}
+.tape{position:relative;flex:1;height:10px;background:var(--line2);border-radius:6px;overflow:hidden}
+.tape-fill{position:absolute;left:0;top:0;bottom:0;background:linear-gradient(90deg,var(--accent),var(--accent2));border-radius:6px;width:0;transition:width .4s}
+.hero{background:var(--sheet);border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--shadow);overflow:hidden;margin-bottom:16px}
+.hero-main{padding:30px 30px 22px}
+.hero-sub{color:var(--soft);font-size:1rem;max-width:62ch;margin:.2rem 0 0}
+.titleblock{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line)}
+.tb-cell{padding:12px 16px;border-right:1px solid var(--line);min-width:0}
+.tb-cell:last-child{border-right:none}
+.tb-cell .k{font-family:var(--mono);font-size:.66rem;letter-spacing:.12em;text-transform:uppercase;color:var(--faint)}
+.tb-cell .v{font-family:var(--mono);font-size:1.15rem;font-weight:500;margin-top:3px}
+.tb-cell .v.accent{color:var(--accent)}
+@media(max-width:680px){.titleblock{grid-template-columns:repeat(2,1fr)}.tb-cell:nth-child(2){border-right:none}.tb-cell:nth-child(1),.tb-cell:nth-child(2){border-bottom:1px solid var(--line)}}
+.card{background:var(--sheet);border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--shadow-sm);padding:18px 20px;margin:14px 0}
+.note{border-left:4px solid var(--amber)}.note .eyebrow{color:var(--amber)}
+.dash{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+@media(max-width:680px){.dash{grid-template-columns:repeat(2,1fr)}}
+.metric{background:var(--sheet2);border:1px solid var(--line2);border-radius:12px;padding:14px 15px}
+.metric .num{font-family:var(--mono);font-size:1.7rem;font-weight:600;color:var(--accent);line-height:1}
+.metric .cap{font-size:.78rem;color:var(--soft);margin-top:2px}
+.metric .mini{height:5px;background:var(--line2);border-radius:3px;overflow:hidden;margin-top:8px}
+.metric .mini>div{height:100%;background:var(--sage);width:0;transition:width .4s}
+.momentum{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-top:13px;font-family:var(--mono);font-size:.78rem;color:var(--soft)}
+.badge{border-radius:999px;padding:3px 10px;font-size:.66rem;font-family:var(--mono);background:var(--sage-tint);color:var(--sage)}
+.badge.locked{background:var(--line2);color:var(--faint)}
+.streakpill{background:var(--accent-tint);color:var(--accent);border-radius:999px;padding:4px 12px;font-weight:600}
+.phasenav{display:flex;gap:8px;flex-wrap:wrap}
+.navpill{font-family:var(--mono);font-size:.76rem;border:1px solid var(--line);background:var(--sheet);border-radius:999px;padding:7px 13px;cursor:pointer;color:var(--soft);transition:.15s}
+.navpill:hover{background:var(--sheet2);border-color:var(--faint)}
+.navpill.active{background:var(--accent);border-color:var(--accent);color:#fff}
+.navpill .stn{color:var(--accent2);margin-right:6px}.navpill.active .stn{color:#f6d9cd}
+.guide{background:linear-gradient(135deg,var(--sage-tint),#eef3e8);border:1px solid #d6e2cd;border-radius:var(--r);padding:16px 18px;margin-bottom:14px}
+.guide .eyebrow{color:var(--sage)}
+.guide .now{font-family:var(--serif);font-size:1.1rem;font-weight:600;margin:.3rem 0 .2rem}
+.guide .why{font-size:.9rem;color:var(--soft)}
+.guide .jump{margin-top:10px;display:inline-block;font-family:var(--mono);font-size:.78rem;background:var(--sage);color:#fff;border:none;border-radius:999px;padding:8px 14px;cursor:pointer}
+.nextwrap{display:grid;gap:9px;margin-top:10px}
+.nextitem{display:flex;gap:12px;align-items:flex-start;background:var(--sheet2);border:1px solid var(--line2);border-radius:11px;padding:11px 13px}
+.nextitem .idx{font-family:var(--mono);font-weight:600;color:var(--accent);font-size:1rem}
+.nextitem .t{font-weight:600;font-size:.92rem}
+.nextitem .w{font-size:.82rem;color:var(--soft);margin-top:1px}
+.toolbar{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.btn{font-family:var(--sans);font-size:.84rem;border:1px solid var(--line);background:var(--sheet);border-radius:999px;padding:7px 13px;cursor:pointer;color:var(--ink);transition:.15s}
+.btn:hover{background:var(--sheet2);border-color:var(--faint)}
+.btn.active{background:var(--ink);border-color:var(--ink);color:#fff}
+.btn.ghost{border-style:dashed}
+.phase{position:relative;margin:22px 0}
+.phase.collapsed .phasebody{display:none}
+.phasehead{display:flex;align-items:center;gap:14px;cursor:pointer;padding:6px 2px 14px;border-bottom:1.5px solid var(--line)}
+.station{flex:0 0 auto;width:46px;height:46px;border-radius:50%;background:var(--sheet);border:1.5px solid var(--accent);color:var(--accent);font-family:var(--mono);font-weight:600;font-size:.92rem;display:flex;align-items:center;justify-content:center;box-shadow:var(--shadow-sm);transition:.3s}
+.phase.complete .station{background:var(--sage);border-color:var(--sage);color:#fff}
+.phasehead .meta{flex:1;min-width:0}
+.phasehead .stn-label{font-family:var(--mono);font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:var(--faint)}
+.phasehead .desc{font-size:.86rem;color:var(--soft);margin-top:2px}
+.phasehead .count{font-family:var(--mono);font-size:.8rem;color:var(--soft);white-space:nowrap;text-align:right}
+.phasehead .chev{color:var(--faint);font-size:.8rem;transition:transform .2s;font-family:var(--mono)}
+.phase.collapsed .chev{transform:rotate(-90deg)}
+.phasebody{padding:6px 0 0 60px}
+@media(max-width:680px){.phasebody{padding-left:8px}}
+.task{border:1px solid var(--line2);background:var(--sheet);border-radius:12px;margin:11px 0;overflow:hidden;transition:box-shadow .2s,border-color .2s}
+.task[open]{box-shadow:var(--shadow);border-color:var(--line)}
+.task.done{background:var(--sheet2)}
+.tasksum{list-style:none;cursor:pointer;padding:15px 16px;display:flex;gap:13px;align-items:flex-start}
+.tasksum::-webkit-details-marker{display:none}.tasksum:hover{background:var(--sheet2)}
+.tickwrap{flex:0 0 auto;margin-top:1px}
+.tick{appearance:none;-webkit-appearance:none;width:22px;height:22px;border:1.5px solid var(--faint);border-radius:7px;cursor:pointer;position:relative;background:var(--sheet);transition:.15s}
+.tick:hover{border-color:var(--accent)}.tick:checked{background:var(--sage);border-color:var(--sage)}
+.tick:checked:after{content:"";position:absolute;left:7px;top:3px;width:5px;height:10px;border:solid #fff;border-width:0 2px 2px 0;transform:rotate(45deg)}
+.tasktop{flex:1;min-width:0}
+.tasktitle{font-weight:600;font-size:1rem;line-height:1.35;font-family:var(--serif)}
+.task.done .tasktitle{color:var(--faint);text-decoration:line-through}
+.taskwhy{font-size:.86rem;color:var(--soft);margin-top:3px}
+.pillrow{display:flex;gap:6px;flex-wrap:wrap;margin-top:9px;align-items:center}
+.pill{font-family:var(--mono);font-size:.7rem;border-radius:999px;padding:3px 9px;background:var(--line2);color:var(--soft)}
+.pill.Core{background:var(--accent-tint);color:var(--accent);font-weight:600}
+.pill.Support{background:var(--slate-tint);color:var(--slate)}
+.pill.Future{background:var(--amber-tint);color:var(--amber)}
+.pill.learn{background:var(--sage-tint);color:var(--sage)}
+.taskprog{display:flex;align-items:center;gap:9px;margin-top:10px}
+.taskprog .mini{flex:1;max-width:260px;height:6px;background:var(--line2);border-radius:4px;overflow:hidden}
+.taskprog .mini>div{height:100%;background:var(--sage);width:0;transition:width .3s}
+.taskprog .sc{font-family:var(--mono);font-size:.72rem;color:var(--faint)}
+.opener{font-family:var(--mono);font-size:.72rem;color:var(--accent);white-space:nowrap}
+.task[open] .opener:after{content:" close \2212"}.task:not([open]) .opener:after{content:" open +"}
+.taskbody{padding:2px 16px 18px;border-top:1px solid var(--line2);margin-top:2px}
+.doblock{margin:14px 0 4px}
+.blocklabel{font-family:var(--mono);font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:7px}
+.steps{display:grid;gap:3px}
+.step{display:flex;gap:10px;align-items:flex-start;padding:6px 8px;border-radius:8px;cursor:pointer}
+.step:hover{background:var(--sheet2)}
+.step input{appearance:none;-webkit-appearance:none;flex:0 0 auto;width:18px;height:18px;border:1.5px solid var(--faint);border-radius:5px;margin-top:2px;cursor:pointer;position:relative;background:var(--sheet)}
+.step input:checked{background:var(--sage);border-color:var(--sage)}
+.step input:checked:after{content:"";position:absolute;left:5px;top:2px;width:4px;height:8px;border:solid #fff;border-width:0 2px 2px 0;transform:rotate(45deg)}
+.step span{font-size:.9rem}
+.step input:checked+span{color:var(--faint);text-decoration:line-through}
+.coachlist{display:grid;gap:8px;margin-top:14px}
+.cbox{background:var(--sheet2);border:1px solid var(--line2);border-radius:11px;overflow:hidden}
+.cbox>summary{list-style:none;cursor:pointer;padding:11px 13px;display:flex;justify-content:space-between;align-items:center;gap:10px;font-family:var(--mono);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--soft)}
+.cbox>summary::-webkit-details-marker{display:none}
+.cbox>summary:hover{color:var(--ink)}
+.cbox>summary:after{content:"+";font-family:var(--mono);color:var(--accent);font-size:.95rem}
+.cbox[open]>summary:after{content:"\2212"}
+.cbox[open]>summary{color:var(--accent);border-bottom:1px solid var(--line2)}
+.cbody{padding:11px 13px;font-size:.87rem;color:var(--soft)}
+.cbody p{margin:0 0 .3rem}.cbody ul{margin:.2rem 0 .4rem;padding-left:1.1rem}.cbody li{margin:.2rem 0}
+.cbody .sub{font-family:var(--mono);font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink);margin:.5rem 0 .2rem}
+.cbox.learnbar{border-left:3px solid var(--sage)}.cbox.quizbar{border-left:3px solid var(--accent)}
+.cbox.slatebar{border-left:3px solid var(--slate)}.cbox.sagebar{border-left:3px solid var(--sage)}
+.term{font-weight:600;color:var(--ink)}
+.quiz details{border:1px solid var(--line2);border-radius:8px;margin:6px 0;background:var(--sheet)}
+.quiz summary{cursor:pointer;padding:8px 10px;font-weight:500;color:var(--ink);font-size:.86rem;list-style:none}
+.quiz summary::-webkit-details-marker{display:none}
+.quiz summary:before{content:"Q · ";font-family:var(--mono);color:var(--accent)}
+.quiz summary:hover{background:var(--sheet2)}
+.quiz .ans{padding:0 10px 9px;font-size:.85rem;color:var(--soft)}
+.quiz .ans:before{content:"A · ";font-family:var(--mono);color:var(--sage)}
+.linklist{display:flex;flex-direction:column;gap:7px}
+.srcitem{border-left:3px solid var(--accent2);background:var(--sheet);border-radius:8px;padding:8px 11px;font-size:.83rem;color:var(--soft)}
+.srcitem .t{font-weight:600;color:var(--ink);font-size:.85rem;display:block;margin-bottom:2px}
+.watchitem{border-left:3px solid var(--slate);background:var(--sheet);border-radius:8px;padding:8px 11px;font-size:.83rem;color:var(--soft);margin-bottom:7px}
+.watchitem .t{font-weight:600;color:var(--ink);font-size:.85rem}
+.conf{font-family:var(--mono);font-size:.6rem;letter-spacing:.05em;text-transform:uppercase;border-radius:4px;padding:1px 5px;margin-left:6px;white-space:nowrap}
+.conf.verified{background:var(--sage-tint);color:var(--sage)}
+.conf.stable{background:var(--slate-tint);color:var(--slate)}
+.conf.confirm{background:var(--amber-tint);color:var(--amber)}
+.prodgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:10px}
+.prodcard{border:1px solid var(--line);background:var(--sheet);border-radius:11px;padding:12px}
+.prodcard h3{font-size:.96rem}
+.notes{width:100%;min-height:64px;margin-top:14px;border:1px solid var(--line);border-radius:10px;background:var(--sheet2);font-family:var(--sans);font-size:.88rem;padding:10px 11px;resize:vertical;color:var(--ink)}
+.notes:focus{outline:none;border-color:var(--accent);background:var(--sheet)}
+.role-table,.cert-table{width:100%;border-collapse:collapse;font-size:.85rem}
+.role-table th,.role-table td,.cert-table th,.cert-table td{border-bottom:1px solid var(--line2);padding:9px 8px;text-align:left;vertical-align:top}
+.role-table th,.cert-table th{font-family:var(--mono);font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:var(--faint);font-weight:500}
+.tag{font-family:var(--mono);font-size:.68rem;border-radius:999px;padding:2px 8px;white-space:nowrap}
+.tag.free{background:var(--sage-tint);color:var(--sage)}.tag.paid{background:var(--amber-tint);color:var(--amber)}.tag.skip{background:var(--line2);color:var(--soft)}
+.masonry{columns:3 270px;column-gap:12px}
+@media(max-width:680px){.masonry{columns:1}}
+.shelfcard,.sidecard{break-inside:avoid;margin:0 0 12px;border:1px solid var(--line);background:var(--sheet);border-radius:12px;padding:4px 14px}
+.shelfcard summary,.sidecard summary{list-style:none;cursor:pointer;font-family:var(--serif);font-weight:600;font-size:.96rem;display:flex;justify-content:space-between;align-items:center;padding:11px 0;gap:8px}
+.shelfcard summary::-webkit-details-marker,.sidecard summary::-webkit-details-marker{display:none}
+.shelfcard summary:after,.sidecard summary:after{content:"+";font-family:var(--mono);color:var(--accent)}
+.shelfcard details[open] summary:after,.sidecard[open] summary:after{content:"\2212"}
+.shelfcard .body,.sidecard .body{padding-bottom:11px}
+.sidegrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px}
+.footer{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;align-items:center}
+.status{font-family:var(--mono);font-size:.78rem;color:var(--sage)}.status.err{color:var(--accent)}
+#topBtn{position:fixed;right:18px;bottom:18px;z-index:55;border-radius:999px;background:var(--accent);color:#fff;border:none;box-shadow:var(--shadow);padding:11px 15px;cursor:pointer;font-family:var(--mono);font-size:.8rem;opacity:0;pointer-events:none;transition:opacity .3s}
+#topBtn.show{opacity:1;pointer-events:auto}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+<style>
+:root{--paper:#ece0c6;--sheet:#fbf3df;--sheet2:#f4e9cf;--ink:#3b2f1e;--soft:#6f6247;--faint:#a8997a;--line:#dac9a4;--line2:#e7d9b8;--accent:#7a5a2e;--accent2:#9c6b34;--accent-tint:#ecdcbd;--sage:#5d7a4e;--sage-tint:#dde6cf;--slate:#4a6b6b;--slate-tint:#dde7e4;--amber:#a9772f;--amber-tint:#eedcb8;--pixel:'Press Start 2P',monospace}
+body{background:#e6d8b8;background-image:radial-gradient(circle at 15% -5%,#f3e8c9 0,rgba(243,232,201,0) 45%),radial-gradient(circle at 100% 0,#dcc99e 0,rgba(220,201,158,0) 40%),repeating-linear-gradient(0deg,rgba(120,90,46,.02) 0 2px,transparent 2px 4px)}
+.eyebrow{font-family:var(--pixel);font-size:.55rem;letter-spacing:.08em}
+h1{font-family:var(--pixel);font-size:1.45rem;line-height:1.55;color:var(--accent);text-shadow:3px 3px 0 var(--accent-tint)}
+@media(min-width:680px){h1{font-size:2rem}}
+.hero{border:3px solid var(--ink);box-shadow:7px 7px 0 rgba(59,47,30,.22)}
+.hero,.card,.task,.metric,.cbox,.shelfcard,.sidecard,.guide,.navpill,.btn,.station,.badge,.streakpill,.tick,.step input,#topBtn{border-radius:7px!important}
+.station{border:3px solid var(--accent);font-family:var(--pixel);font-size:.58rem;box-shadow:3px 3px 0 var(--accent-tint)}
+.phase.complete .station{box-shadow:3px 3px 0 var(--sage-tint)}
+.phasehead .stn-label{font-family:var(--pixel);font-size:.5rem;color:var(--accent2)}
+.navpill .stn{font-family:var(--pixel);font-size:.52rem}
+.badge{font-family:var(--pixel);font-size:.48rem;border:2px solid currentColor;padding:5px 7px}
+.streakpill{font-family:var(--pixel);font-size:.52rem;border:2px solid var(--accent)}
+.tb-cell .v{font-family:var(--pixel);font-size:.82rem}
+.guide{border:3px solid var(--sage)}
+.guide .jump{font-family:var(--pixel);font-size:.52rem;padding:10px 13px}
+.task[open]{border-color:var(--accent)}
+#topBtn{font-family:var(--pixel);font-size:.52rem}
+.sticky-in .pct{font-family:var(--pixel);font-size:.58rem}
+.blocklabel{color:var(--accent2)}
+</style>
+</head>
+<body>
+<div id="sticky"><div class="sticky-in"><span class="label">Whole journey</span><div class="tape"><div class="tape-fill" id="stickyFill"></div></div><span class="pct" id="stickyPct">0%</span></div></div>
+<button id="topBtn" onclick="scrollTo({top:0,behavior:'smooth'})">↑ top</button>
+<div class="wrap">
+  <div class="hero" id="top">
+    <div class="hero-main">
+      <span class="eyebrow">A cosy career quest</span>
+      <h1>The AEC Quest</h1>
+      <p class="hero-sub">A guided journey from your point cloud and CAD work into the technical enablement cluster, and onward. Travel chapter by chapter. Each one teaches you something, lets you test yourself, then sets a small deed to do. Tick the deeds, the map holds your place and points to your next quest. Cosy pace, real progress.</p>
+    </div>
+    <div class="titleblock">
+      <div class="tb-cell"><div class="k">Journey</div><div class="v accent" id="tbPct">0%</div></div>
+      <div class="tb-cell"><div class="k">Chapters done</div><div class="v" id="tbPhases">0 / 0</div></div>
+      <div class="tb-cell"><div class="k">Focused hours left</div><div class="v" id="tbHours">0h</div></div>
+      <div class="tb-cell"><div class="k">Focused weeks left</div><div class="v" id="tbWeeks">~0</div></div>
+    </div>
+  </div>
+
+  <div class="card note">
+    <span class="eyebrow">How this works, honestly</span>
+    <p class="small" style="margin:.4rem 0 0">Open a task, learn the key concepts, test yourself, then do the steps. A task completes when its subtasks are all ticked. Each link carries my confidence label: <span class="conf verified">verified</span> I opened it, <span class="conf stable">stable</span> a major site I trust, <span class="conf confirm">confirm</span> I could not fully check it, treat with care. The accuracy of what is here is mine to hold, not a test of you. Focused weeks is hours divided by about 12, the calendar will run longer.</p>
+  </div>
+
+  <div class="guide" id="guidebox"></div>
+
+  <div class="card">
+    <span class="eyebrow">Your journey so far</span>
+    <div class="dash" style="margin-top:12px">
+      <div class="metric"><div class="num" id="mTasks">0%</div><div class="cap">Tasks complete</div><div class="mini"><div id="mTasksBar"></div></div></div>
+      <div class="metric"><div class="num" id="mCore">0%</div><div class="cap">Core tasks complete</div><div class="mini"><div id="mCoreBar"></div></div></div>
+      <div class="metric"><div class="num" id="mSteps">0%</div><div class="cap">Subtasks complete</div><div class="mini"><div id="mStepsBar"></div></div></div>
+      <div class="metric"><div class="num" id="mHours">0h</div><div class="cap">Focused hours left</div><div class="mini"><div id="mHoursBar"></div></div></div>
+    </div>
+    <div class="momentum" id="momentum"></div>
+    <p class="small" id="hoursNote" style="margin:12px 0 0"></p>
+  </div>
+
+  <div class="card">
+    <h2>Your quest map</h2>
+    <p class="small" style="margin:.3rem 0 12px">Eight chapters, in order. Tap one to leap to it. Lessons and building are woven together so you learn a thing, then use it.</p>
+    <div class="phasenav" id="phaseNav"></div>
+  </div>
+
+  <div class="card"><span class="eyebrow">Your next quest</span><div class="nextwrap" id="next"></div></div>
+
+  <div class="card toolbar">
+    <span class="small" style="font-family:var(--mono)">Filter:</span>
+    <button class="btn active" data-filter="all" onclick="setFilter('all')">All</button>
+    <button class="btn" data-filter="core" onclick="setFilter('core')">Core only</button>
+    <button class="btn" data-filter="learn" onclick="setFilter('learn')">Has lessons</button>
+    <button class="btn" data-filter="open" onclick="setFilter('open')">Open</button>
+    <span style="flex:1"></span>
+    <button class="btn ghost" onclick="expandAll()">Expand all</button>
+    <button class="btn ghost" onclick="collapseAll()">Collapse all</button>
+  </div>
+
+  <div id="phases"></div>
+
+  <div class="card">
+    <h2>Your five target roles</h2>
+    <table class="role-table">
+      <tr><th>Role</th><th>What it is</th><th>Selling pressure</th><th>Pay band</th></tr>
+      <tr><td>Product Education / Enablement</td><td>Build the training and docs that help users get good</td><td>None</td><td>£40k to £60k</td></tr>
+      <tr><td>Implementation / Onboarding</td><td>Set new customers up and confident</td><td>Minimal</td><td>£40k to £60k</td></tr>
+      <tr><td>Solutions Consultant, post sales</td><td>Bridge users and the product team</td><td>Some, avoid pre sales</td><td>£50k to £75k</td></tr>
+      <tr><td>Customer Success Engineer / TAM</td><td>The customer technical go to, drives adoption</td><td>Varies</td><td>£45k to £70k</td></tr>
+      <tr><td>Digital Adoption / Transformation</td><td>Drive how a firm adopts new tools</td><td>Internal change</td><td>£45k to £70k</td></tr>
+    </table>
+    <p class="small faint" style="margin:10px 0 0">Pay bands are indicative June 2026 context, not guarantees.</p>
+  </div>
+
+  <div class="card">
+    <h2>Certificates and credentials</h2>
+    <p class="small" style="margin:.3rem 0 10px">Signals, not gates. Free where free gives the knowledge and the signal, paid only where it opens a door.</p>
+    <table class="cert-table">
+      <tr><th>Credential</th><th>Cost</th><th>Worth it when</th></tr>
+      <tr><td><a href="https://pulseplus.gainsight.com/page/preview-level-1-customer-success-manager-certified-professional" target="_blank" rel="noopener">Gainsight CSM Level 1</a></td><td><span class="tag free">Free</span></td><td>Always. Vocabulary plus a LinkedIn badge.</td></tr>
+      <tr><td><a href="https://academy.hubspot.com/courses/customer-success" target="_blank" rel="noopener">HubSpot Customer Success</a></td><td><span class="tag free">Free</span></td><td>Reinforces the fundamentals.</td></tr>
+      <tr><td><a href="https://learn.microsoft.com/en-us/training/" target="_blank" rel="noopener">Microsoft Learn AI fundamentals</a></td><td><span class="tag free">Free</span></td><td>For AI literacy. Skip the retiring AI-900 exam.</td></tr>
+      <tr><td><a href="https://ukbimframework.org/resources/" target="_blank" rel="noopener">ISO 19650 knowledge, IMI guidance</a></td><td><span class="tag free">Free</span></td><td>The knowledge underpins every platform.</td></tr>
+      <tr><td><a href="https://learn.procore.com/" target="_blank" rel="noopener">Procore certifications</a></td><td><span class="tag free">Free</span></td><td>Construction SaaS credibility.</td></tr>
+      <tr><td><a href="https://www.bcs.org/qualifications-and-certifications/certifications-for-professionals/business-analysis/foundation-certificate-in-business-analysis/" target="_blank" rel="noopener">BCS Business Analysis Foundation</a></td><td><span class="tag paid">£192 to £285</span></td><td>Only if BA language recurs in target ads.</td></tr>
+      <tr><td><a href="https://bre.ac/course/bim-foundations/" target="_blank" rel="noopener">BRE ISO 19650 Foundations</a></td><td><span class="tag paid">Check price</span></td><td>Only if you want a domain badge. One course, not the full cert.</td></tr>
+      <tr><td>Full BRE Global BIM individual certification</td><td><span class="tag skip">£1000+, recurring</span></td><td>Skip unless you target BIM Information Manager.</td></tr>
+    </table>
+  </div>
+
+  <div class="card">
+    <h2>Project lab</h2>
+    <p class="small" style="margin:.3rem 0 12px">Extra build ideas for practice and portfolio. Pick one when you want a fresh proof piece.</p>
+    <div class="sidegrid" id="projects"></div>
+  </div>
+
+  <div class="card">
+    <h2>Side quests, edge from your interests</h2>
+    <p class="small" style="margin:.3rem 0 12px">Optional threads that compound value. Pick one if it pulls you.</p>
+    <div class="sidegrid" id="sidequests"></div>
+  </div>
+
+  <div class="card">
+    <h2>Open source radar</h2>
+    <p class="small" style="margin:.3rem 0 12px">Repos and projects to watch for ideas and inspiration. Star what interests you, read the README first, do not feel you must build.</p>
+    <div class="masonry" id="radar"></div>
+  </div>
+
+  <div class="card">
+    <h2>YouTube and creator shelf</h2>
+    <p class="small" style="margin:.3rem 0 12px">The general library. Also woven into tasks where they help, with what to watch and why.</p>
+    <div class="masonry" id="channels"></div>
+  </div>
+
+  <div class="card">
+    <h2>Source shelf</h2>
+    <p class="small" style="margin:.3rem 0 12px">Every link, with my confidence label and a route to the actual material.</p>
+    <div class="masonry" id="sources"></div>
+  </div>
+
+  <div class="card">
+    <h2>Weekly journal</h2>
+    <p class="small" style="margin:.3rem 0 10px">Goal, reality, options, way forward. Note any assumption you challenged.</p>
+    <textarea class="notes" style="min-height:100px" id="journal" oninput="state.journal=this.value;save()"></textarea>
+  </div>
+
+  <div class="card footer">
+    <span class="status" id="status">Ready</span>
+    <div style="display:flex;gap:8px">
+      <button class="btn" onclick="exportData()">Export progress</button>
+      <button class="btn" onclick="resetData()" style="color:var(--amber)">Reset</button>
+    </div>
+  </div>
+</div>
+
+<script>
+const RATE=12,KEY='aec_path_final_v1';
+const SOURCES={
+ S01:{t:"IMI guidance, ISO 19650 (free)",u:"https://ukbimframework.org/resources/",conf:"verified",what:"The free UK guidance to ISO 19650.",route:"On the Resources page, download Guidance Part 1 Concepts first, then Guidance Part 2 for the delivery phase. Read for EIR, BEP, CDE and information delivery milestones. The PDFs are named by part."},
+ S02:{t:"Microsoft Learn, AI fundamentals (free)",u:"https://learn.microsoft.com/en-us/training/",conf:"stable",what:"Free AI fundamentals modules.",route:"Use Browse all or search AI fundamentals, start with the free Get started with AI on Azure modules. Do not book AI-900, it retires 30 June 2026."},
+ S03:{t:"BCS Business Analysis Foundation (paid)",u:"https://www.bcs.org/qualifications-and-certifications/certifications-for-professionals/business-analysis/foundation-certificate-in-business-analysis/",conf:"verified",what:"Foundation BA certificate. About £192 to £285.",route:"Read the syllabus and price, compare with your ad matrix, book only if BA language recurs."},
+ S04:{t:"Google Technical Writing One (free)",u:"https://developers.google.com/tech-writing/one",conf:"verified",what:"Free clear technical writing course.",route:"Read lessons in order, do exercises with your AEC examples, rewrite one real guide section."},
+ S05:{t:"Diataxis framework (free)",u:"https://diataxis.fr/",conf:"verified",what:"Tutorial, how to, reference, explanation.",route:"Read once, then sort each portfolio piece into one of the four types."},
+ S06:{t:"HubSpot Academy Customer Success (free)",u:"https://academy.hubspot.com/courses/customer-success",conf:"stable",what:"Free customer success course.",route:"Free account, take the course, pull ten terms into your glossary."},
+ S07:{t:"Gainsight CSM Level 1 (free)",u:"https://pulseplus.gainsight.com/page/preview-level-1-customer-success-manager-certified-professional",conf:"verified",what:"Free customer success Level 1 with a badge.",route:"Free account, one module per sitting over two to three weeks, add the badge to LinkedIn."},
+ S08:{t:"Autodesk Forma Quick Start (free)",u:"https://www.autodesk.com/learn/ondemand/curated/forma-quick-start-guide",conf:"verified",what:"Official Forma getting started tutorials.",route:"Start with Create a project, then Preview and add geometries. Note user action, purpose, likely confusion, support note."},
+ S09:{t:"Bluebeam Learning Centre (free)",u:"https://www.bluebeam.com/uk/resources/learning-center/",conf:"stable",what:"Official Bluebeam courses.",route:"Open the Learning Center, find the Revu Starter Kit, follow setup then navigation then markups."},
+ S10:{t:"Autodesk YouTube",u:"https://www.youtube.com/@autodesk",conf:"verified",what:"Official Autodesk channel.",route:"Search Forma, Docs or Construction Cloud, watch one beginner video."},
+ S11:{t:"Leica Geosystems YouTube",u:"https://www.youtube.com/channel/UCbLKYnRvGULD_ZConBvwcag",conf:"verified",what:"Official Leica reality capture channel.",route:"Search BLK360 or REGISTER 360, pick a workflow close to tools you know."},
+ S12:{t:"NBS YouTube",u:"https://www.youtube.com/channel/UCWeaJ3mkpBY_Jnj1oXDncYA",conf:"verified",what:"NBS specification and digital construction.",route:"Search BIM or information management, extract vocabulary."},
+ S13:{t:"The B1M YouTube",u:"https://www.youtube.com/@TheB1M",conf:"verified",what:"Construction trends and innovation.",route:"Watch one trend video a month, note one opportunity and one risk."},
+ S14:{t:"Hungary BIM regulation 31/2024",u:"https://njt.jog.gov.hu/jogszabaly/2024-31-20-8X",conf:"confirm",what:"Hungarian legal text. Not re-verified.",route:"Use browser translation, keep the original as source, do not turn into a legal claim without an expert."},
+ S15:{t:"HubSpot onboarding templates",u:"https://offers.hubspot.com/customer-onboarding-templates",conf:"stable",what:"Free onboarding plan templates.",route:"Study the structure, rebuild it for an AEC tool in your own words."},
+ S16:{t:"Atlassian user story examples",u:"https://www.atlassian.com/agile/project-management/user-stories",conf:"stable",what:"User story template and examples.",route:"Rewrite one AEC need as As a user I want so that, add acceptance criteria."},
+ S17:{t:"National Careers Service STAR",u:"https://nationalcareers.service.gov.uk/careers-advice/interview-advice/the-star-method",conf:"stable",what:"Official STAR interview structure.",route:"Draft your rescue story with Action longest, add a Result without inventing numbers."},
+ S18:{t:"Google technical writing resources",u:"https://developers.google.com/tech-writing/resources",conf:"verified",what:"Extra checklists and examples.",route:"Pick one checklist, apply one rule, note what changed."},
+ S19:{t:"Write the Docs YouTube",u:"https://www.youtube.com/results?search_query=write+the+docs",conf:"confirm",what:"Docs community talks. Confirm the channel on open.",route:"Search Write the Docs, pick a practical talk on docs or onboarding."},
+ S20:{t:"IIBA YouTube",u:"https://www.youtube.com/channel/UCtpU0wWTg_QBEXnp4HujLEg",conf:"verified",what:"Official Business Analysis institute. Practitioner option: the Business Analysis Doctor.",route:"Search requirements or stakeholders, watch one beginner video."},
+ S21:{t:"CSM Practice YouTube",u:"https://www.youtube.com/@CSMPractice",conf:"verified",what:"Customer success vocabulary and role.",route:"Search onboarding, QBR or adoption, split notes into useful, sales heavy, not relevant."},
+ S22:{t:"PreSales Collective YouTube",u:"https://www.youtube.com/@PreSalesCollective",conf:"verified",what:"Solutions and pre sales content.",route:"Watch discovery and demo structure, flag quota heavy content."},
+ S23:{t:"Procore certifications (free)",u:"https://learn.procore.com/",conf:"verified",what:"Free role based product trainings.",route:"Open the catalog, do Get started overview then a free role based course, register free even without an account."},
+ S24:{t:"Trimble Learn (free)",u:"https://www.trimble.com/en/learn",conf:"verified",what:"Official Trimble learning, moved here.",route:"Search a tool from your ads such as Trimble Connect, open a beginner course."},
+ S25:{t:"Graphisoft Learn",u:"https://learn.graphisoft.com/",conf:"verified",what:"Archicad and BIM learning.",route:"Open the Catalog, filter to free or beginner, take the free Archicad basics."},
+ S26:{t:"Bentley Learn",u:"https://www.bentley.com/support/learn/",conf:"verified",what:"Bentley software training.",route:"Search ProjectWise or OpenBuildings, start with overview material, a free account may be needed."},
+ S27:{t:"Leica TruView help",u:"https://rcdocs.leica-geosystems.com/truview/latest/help-truview",conf:"verified",what:"Official viewer help, a model for clear docs.",route:"Study how features split into small topics, especially User Interface, copy the structure."},
+ S28:{t:"Autodesk Forma, create a project",u:"https://www.autodesk.com/learn/ondemand/curated/forma-quick-start-guide",conf:"verified",what:"A concrete ordered product workflow.",route:"Follow the ordered steps, use as a model for your own walkthrough."},
+ S29:{t:"Bluebeam Revu Starter Kit",u:"https://www.bluebeam.com/uk/resources/learning-center/",conf:"stable",what:"Beginner friendly onboarding structure.",route:"Note how it separates setup, navigation, editing, collaboration, borrow the pattern."},
+ S30:{t:"Microsoft Writing Style Guide",u:"https://learn.microsoft.com/en-us/style-guide/welcome/",conf:"stable",what:"Clarity and tone benchmark.",route:"Read Top tips, pick three rules, apply to one paragraph."},
+ S31:{t:"Technical writer portfolio examples",u:"https://authory.com/examples/technical-writer-portfolio-examples",conf:"confirm",what:"Real portfolio examples, commercial site.",route:"Open two or three, note how samples are grouped and introduced."},
+ S32:{t:"Stripe documentation, clarity benchmark",u:"https://stripe.com/docs",conf:"stable",what:"Gold standard product docs. Not AEC.",route:"Open any getting started page, study how each task is short, ordered, jargon free."},
+ S33:{t:"MDN Web Docs, reference benchmark",u:"https://developer.mozilla.org/",conf:"stable",what:"Gold standard reference docs. Not AEC.",route:"Open any reference page, study the consistent structure and plain definitions."}
+};
+const WATCH={
+ S10:{watch:"Search Forma, Docs or Construction Cloud",why:"the words used for implementation and enablement"},
+ S11:{watch:"Search BLK360 or REGISTER 360",why:"reality capture workflow awareness, close to your niche"},
+ S12:{watch:"Search BIM or information management",why:"UK AEC vocabulary"},
+ S13:{watch:"Watch one trend video a month",why:"keeps your innovation lens alive"},
+ S19:{watch:"Find a practical talk on docs or onboarding",why:"documentation thinking for Product Education"},
+ S20:{watch:"Search requirements or stakeholders",why:"business analysis and voice of customer awareness"},
+ S21:{watch:"Search onboarding, QBR or adoption",why:"customer success vocabulary and a reality check"},
+ S22:{watch:"Watch discovery and demo structure",why:"solutions role awareness, and what to avoid"}
+};
+const LEARN={
+ TC1:{teach:`<p>ISO 19650 is the international standard for managing information across a built asset's whole life, using BIM. It has six parts: 1 concepts, 2 delivery phase, 3 operation, 4 information exchange, 5 security, 6 health and safety.</p>
+ <p>The artefacts you must be able to name:</p><ul>
+ <li><span class="term">OIR, AIR, PIR</span>: what the organisation, the asset operation, and the project each need to know.</li>
+ <li><span class="term">EIR, Exchange Information Requirements</span>: what the client asks each appointed party to deliver, when and how.</li>
+ <li><span class="term">BEP, BIM Execution Plan</span>: the delivery team's answer to the EIR, how they will meet it.</li>
+ <li><span class="term">CDE, Common Data Environment</span>: the single agreed place where information is stored, shared and approved, with status codes for work in progress, shared, published and archived.</li>
+ <li><span class="term">MIDP and TIDP</span>: the master plan of what information is delivered, by whom and when, and each task team's piece of it.</li>
+ <li><span class="term">Level of information need</span>: just enough information, never too much or too little.</li></ul>`,
+ quiz:[["What does EIR stand for and who issues it?","Exchange Information Requirements. The appointing party, the client, issues them."],["What is the CDE and what is it for?","The Common Data Environment, the single agreed place where project information is stored, managed, shared and approved, using status codes."],["The BEP is a response to what?","The EIR. It sets out how the delivery team will meet the client's information requirements."],["Name two of the six parts.","For example Part 1 concepts and Part 2 the delivery phase."]]},
+ T013:{teach:`<p>Customer success language is what the technical account, implementation and CSE roles run on. The core terms:</p><ul>
+ <li><span class="term">Adoption</span>: how much and how deeply customers actually use the product, not just that they bought it.</li>
+ <li><span class="term">Time to value</span>: how long until a new customer gets real benefit. Good onboarding shortens it.</li>
+ <li><span class="term">Churn</span>: customers leaving or cancelling. Retention is the opposite.</li>
+ <li><span class="term">Net revenue retention, NRR</span>: revenue kept plus expansion from existing customers. Above 100 percent means the current base is growing.</li>
+ <li><span class="term">QBR, quarterly business review</span>: a regular check in to review value, usage and goals with a customer.</li>
+ <li><span class="term">Health score</span>: a combined signal from usage, support and sentiment that flags churn risk or growth.</li></ul>
+ <p>You can speak this language from your guidance and adoption work. You do not need to have owned a sales quota.</p>`,
+ quiz:[["What does time to value mean and why does onboarding matter?","How long until a customer gets real benefit. Good onboarding shortens it, which lowers churn risk."],["NRR above 100 percent means what?","The existing customer base is growing in revenue, expansion outweighs losses."],["What is a health score for?","To predict which customers may churn or are ready to grow, from signals like usage and support."]]},
+ TL3:{teach:`<p>You do not need to build AI, you need to speak about it and use it with judgement.</p><ul>
+ <li><span class="term">AI and ML</span>: AI is software doing tasks that usually need human intelligence. Machine learning is the common method, the system learns patterns from data instead of being given explicit rules.</li>
+ <li><span class="term">Model, training, inference</span>: a model is trained on data, then used to make predictions or generate output.</li>
+ <li><span class="term">LLM, large language model</span>: predicts likely next words, which makes chat assistants fluent, but it can be confidently wrong.</li>
+ <li><span class="term">Generative AI and prompt</span>: produces new text, images or code from the instruction you give it.</li>
+ <li><span class="term">Hallucination</span>: fluent output that is false or unsupported. You must verify.</li></ul>
+ <p>The AI resistant part of your value is judgement: checking accuracy, spotting bias, protecting data, and owning decisions with real consequences.</p>`,
+ quiz:[["What is a hallucination in an LLM?","Fluent output that is false or unsupported. You always verify before trusting it."],["How is machine learning different from traditional programming?","Machine learning learns patterns from data. Traditional programming follows explicit rules a person writes."],["Where is human judgement still essential?","Verifying accuracy, checking for bias, protecting data, and owning decisions that carry consequences."]]}
+};
+const TASKS=[
+ {id:"T001",lane:"Core foundation",title:"Set up your evidence and learning workspace",priority:"Core",hours:1,why:"One place for proof, notes and decisions.",steps:["Make a folder called AEC Adoption Path.","Add subfolders: Evidence Bank, Job Ads, Learning Notes, Portfolio, CV and LinkedIn, Growth Radar.","Make one note called Assumptions and Questions.","Drop your CV in."],output:"A folder structure and one assumptions note.",looks:"You know where every future piece goes."},
+ {id:"T002",lane:"Core foundation",title:"Define the shared identity and parallel lanes",priority:"Core",hours:1,why:"One shared core serves several lanes until the market gives evidence.",steps:["Write the umbrella: AEC technical adoption and enablement.","List the five lanes plus Business Analysis as support.","One line each: what I like, what I screen for.","Add titles only where proof matches."],output:"A role family note with parallel lanes.",looks:"You can stay flexible without sounding vague.",choice:{pros:["Keeps options open while roles are still tested.","One skill stack serves several titles."],cons:["Less satisfying than one shiny title.","Needs review so it does not blur."],good:["One umbrella identity, tailored surface per application."]}},
+ {id:"TC1",lane:"Core foundation",title:"Build ISO 19650 knowledge from the free IMI guidance",priority:"Core",hours:6,why:"The single source of truth world underpins every AEC platform. You need the knowledge, not a costly badge.",steps:["Open the IMI Resources page.","Download Guidance Part 1 Concepts, then Guidance Part 2.","Note EIR, BEP, CDE and milestones in plain words.","Keep the notes for content and interviews."],output:"Reusable ISO 19650 notes and talking points.",looks:"You can explain why information management matters in a minute.",sources:["S01"],examples:["S01"],
+  choice:{pros:["Free, and the knowledge is what roles use.","Supports solutions, implementation and adoption lanes."],cons:["No badge from the free route."],good:["The full BRE individual cert is over a thousand pounds with recurring fees, skip it unless you target BIM Information Manager. The single BRE Foundations course is the cheap entry if you want a badge."]}},
+ {id:"T003",lane:"Field awareness",title:"Collect 20 real job adverts",priority:"Core",hours:4,why:"Stops the path being built around imagined roles.",steps:["Open LinkedIn Jobs and company pages.","Search one phrase at a time across the five titles plus AEC, construction software, BIM.","Save each as PDF or text.","Record title, company, location, remote, salary, must haves, nice to haves, red flags, phrases.","Stop at 20."],output:"Twenty advert records.",looks:"A table of real market evidence.",choice:{pros:["LinkedIn gives volume.","Company pages give cleaner evidence.","Vendor pages reveal product language."],cons:["LinkedIn is noisy.","Some ads hide salary or remote detail."],good:["Use all three. The goal is patterns, not one perfect ad."]}},
+ {id:"T004",lane:"Field awareness",title:"Build the role language matrix",priority:"Core",hours:3,why:"Translates your evidence into the wording employers use.",steps:["Columns: requirement, count in ads, my proof, gap, action.","Copy repeated phrases exactly.","Group into adoption, onboarding, training, implementation, stakeholder, feedback, value, support, workflow.","Highlight anything in six or more ads.","Mark each gap blocking, trainable, optional or irrelevant."],output:"A job language matrix.",looks:"You can see what the market keeps asking for."},
+ {id:"T006",lane:"Field awareness",title:"Choose one first product ecosystem",priority:"Core",hours:5,why:"The first product sprint, not a forever choice.",steps:["Count product names across your 20 ads.","Columns: appears in ads, connects to my experience, official learning, demo possible, interest, UK or EU relevance.","Score each 1 to 5.","Open official learning for the top three only.","Pick one and write the reason."],output:"A chosen first product plus a score table.",looks:"A clear first move that preserves options.",sources:["S08","S09","S23","S24","S25","S26"],videos:["S10","S11","S12"],
+  choice:{pros:["One concrete product sprint and output.","Stops shallow learning across too many tools."],cons:["The first product may not be your final specialism.","Some tools have limited access."],good:["Autodesk is broad, Leica is closest to you, Bluebeam is practical. Pick on job ads plus access."]},
+  productOptions:[
+   {name:"Autodesk Forma and Construction Cloud",good_for:"Implementation, Product Education, Digital Adoption.",pros:["Large ecosystem.","Free official learning.","Construction cloud language."],cons:["Less direct to point cloud than Leica.","Access can limit depth."],hidden:["Roles may expect ecosystem fluency.","Demos hide messy reality."],choose_if:"Ads mention Autodesk, Forma, ACC, Docs or BIM 360.",sources:["S08","S10"]},
+   {name:"Leica or Hexagon Reality Capture",good_for:"Application Specialist, Implementation, reality capture.",pros:["Closest to your expertise.","Strong credibility bridge."],cons:["May involve travel or hardware.","Fewer roles."],hidden:["Some roles value field scanning over office work."],choose_if:"You want the shortest leap and target reality capture vendors.",sources:["S11","S27"]},
+   {name:"Bluebeam",good_for:"Digital Adoption, Product Education.",pros:["Practical and common.","Easy to build a small guide."],cons:["Less glamorous.","Less connected to point cloud."],hidden:["Adoption pain often lives in basic tools used badly."],choose_if:"Ads mention Bluebeam, markups or Studio.",sources:["S09","S29"]},
+   {name:"Procore",good_for:"Customer success and implementation in construction SaaS.",pros:["Free learning and certificates.","Strong CS relevance."],cons:["Less close to survey work.","Can lean commercial."],hidden:["Screen hard for quota and account ownership."],choose_if:"Ads mention Procore and the role is technical, not sales.",sources:["S23"]}
+  ]},
+ {id:"T005",lane:"Parallel route lanes",title:"Run the five lane scorecard, without choosing yet",priority:"Core",hours:2,why:"Keeps all five lanes open while avoiding vague prep.",steps:["Five lanes as rows.","Score 1 to 5 for energy, salary, remote fit, current proof, market frequency, sales risk, consultancy value.","One evidence sentence per score.","Update monthly."],output:"A parallel lane scorecard.",looks:"Options tracked side by side.",choice:{pros:["Shows which lanes improve over time.","Makes decisions evidence based."],cons:["Scores are judgement calls.","A lane can look good and feel wrong."],good:["Update monthly, not daily."]}},
+ {id:"T007",lane:"Evidence bank",title:"Inventory your current proof",priority:"Core",hours:3,why:"Your bridge evidence already exists, this makes it visible.",steps:["Open your CV.","Highlight client guidance, training, QA, troubleshooting, workflow improvement, adoption, scope.","Table: example, audience, problem, action, outcome, can anonymise, lanes supported.","Add ten, star the best four."],output:"An evidence inventory of ten items.",looks:"Your pivot is grounded in real examples.",keep:"Use observable outcomes where numbers are unknown. Do not invent metrics."},
+ {id:"T008",lane:"Evidence bank",title:"Create an anonymised client guide sample",priority:"Core",hours:5,why:"Proves user guidance skill for several lanes.",steps:["Pick the TruView or viewer guide if safe.","Remove names, addresses, job numbers, coordinates, branding.","Add a cover note: audience, problem, tool, outcome.","Apply Google Technical Writing One.","Classify it with Diataxis."],output:"One anonymised guide sample.",looks:"A non expert could follow it.",sources:["S04","S05"],examples:["S27","S30","S32","S33"],videos:["S19"],keep:"Confidentiality wins. If it cannot be anonymised, recreate a fictional version."},
+ {id:"T009",lane:"Evidence bank",title:"Write the point cloud to CAD workflow explainer",priority:"Core",hours:4,why:"Shows domain depth and clear communication.",steps:["Title it From point cloud to CAD deliverable.","Headings: capture, registration, clean up, QA, export, CAD setup, drafting, checking, issue, client support.","Under each: what happens, who cares, common risk, how to reduce it.","Add one simple flow diagram.","End on why scope and data quality matter."],output:"One workflow explainer.",looks:"A project manager understands it, not just a CAD person.",examples:["S05","S30","S33"],repos:["G03"],keep:"Be accurate about what you own versus what surveyors provide."},
+ {id:"T010",lane:"Evidence bank",title:"Write one rescue and QA case study",priority:"Core",hours:4,why:"Your problem solving is a strong signal.",steps:["Pick one example where risk was fixed or clarified.","Headings: context, risk, constraints, checks, action, communication, outcome, lesson.","Remove sensitive details and blame.","Make a portfolio version and a STAR interview version."],output:"One anonymised case study.",looks:"The reader sees judgement and responsibility.",examples:["S17"],keep:"Frame issues as process, data or communication risks, never personal attacks."},
+ {id:"T011",lane:"Core learning",title:"Complete Google Technical Writing One and apply it",priority:"Core",hours:5,why:"Improves every enablement asset you make.",steps:["Open the course.","Read lessons in order.","Do exercises with your AEC examples.","Rewrite one section of your guide.","Keep before and after versions."],output:"Course notes plus an improved guide section.",looks:"Clearer, shorter, easier to scan.",sources:["S04"],examples:["S18","S30","S32"],videos:["S19"]},
+ {id:"T012",lane:"Core learning",title:"Use Diataxis to organise your documents",priority:"Support",hours:2,why:"Stops one document trying to answer every question.",steps:["Open Diataxis.","Read the four types.","Table: tutorial, how to, reference, explanation.","Place every piece into one type.","Rename anything unclear."],output:"A documentation map.",looks:"Each document has one clear user need.",sources:["S05"],examples:["S05","S30"]},
+ {id:"TL1",lane:"Core learning",title:"Complete Gainsight CSM Level 1 (free)",priority:"Core",hours:6,why:"The cheapest credible customer success credential, free, with a LinkedIn badge and the cluster's shared vocabulary.",steps:["Free account.","One module per sitting over two to three weeks.","Note metrics and rituals as you go.","Add the badge to LinkedIn."],output:"A LinkedIn badge and shared vocabulary.",looks:"You can use customer success language naturally.",sources:["S07"],videos:["S21"],keep:"Vocabulary, not a claim you have owned revenue targets."},
+ {id:"TL2",lane:"Core learning",title:"Take the free HubSpot Customer Success course",priority:"Support",hours:5,why:"Reinforces the fundamentals from a second angle.",steps:["Enrol free.","Work through alongside Gainsight.","Skim where it overlaps.","Pull AEC relevant terms into your glossary."],output:"A certificate and reinforced fundamentals.",looks:"The vocabulary is sticking.",sources:["S06"],keep:"Generic SaaS, use for vocabulary only."},
+ {id:"T013",lane:"Core learning",title:"Build an AEC adoption glossary",priority:"Core",hours:5,why:"Technical account, implementation and CSE roles use adoption and value language.",steps:["Open the customer success sources.","Extract ten terms.","Write your own one line definition of each.","Translate each into an AEC software example."],output:"An AEC adoption glossary.",looks:"You can speak the business language without faking quota ownership.",sources:["S06","S07"],examples:["S15","S16"],videos:["S21"]},
+ {id:"TL3",lane:"Core learning",title:"Learn AI fundamentals free on Microsoft Learn",priority:"Core",hours:5,why:"AI literacy is the most in demand skill. Free, and it future proofs you.",steps:["Open Microsoft Learn training.","Work the AI fundamentals path.","Per module: one AEC use, one limitation, one human check.","Practise using AI to draft, then verify every line."],output:"AI literacy plus a habit of owning accuracy.",looks:"You can talk about AI features and where human judgement is needed.",sources:["S02"],
+  choice:{pros:["Free, and immediately useful.","The judgement part is the AI resistant part."],cons:["No badge from the free route."],good:["Only sit the current Azure AI Fundamentals exam if a role asks. Do not book AI-900, it retires 30 June 2026."]}},
+ {id:"T014",lane:"Business analysis support",title:"Decide if BCS Business Analysis is worth paying for",priority:"Support",hours:2,why:"BA supports the translate user needs to the tech team route, earned by evidence not anxiety.",steps:["Open the BCS page.","Read syllabus and price.","Compare with your ad matrix.","Mark topics: already do, useful gap, not relevant.","Book only if five or more target ads ask for BA skills."],output:"A BCS decision note.",looks:"You know if BA is a serious lane or just interesting.",sources:["S03"],examples:["S16"],videos:["S20"],
+  choice:{pros:["Supports requirements, user stories and feedback work.","Strengthens Voice of Customer and Digital Adoption lanes."],cons:["May be unnecessary for Product Education.","BA can become a distracting separate route."],good:["Self study with the exam is about £285, far cheaper than tutor led at over a thousand. Only pay if BA language recurs."]}},
+ {id:"T015",lane:"Product sprint",title:"Complete the first official module for your product",priority:"Core",hours:6,why:"Hands on familiarity supports implementation, solutions and enablement.",steps:["Open the source for your chosen product.","Do the first beginner module or starter kit only.","Notes: user action, purpose, likely confusion, support note.","Save screenshots where allowed.","Write what you would explain to a new user first."],output:"Product notes and an onboarding friction list.",looks:"You can explain the first user journey clearly.",sources:["S08","S09"],examples:["S27","S28","S29"],videos:["S10","S11"],repos:["G01"],keep:"Say familiarisation or product sprint, not proficiency, unless you have deeper practice."},
+ {id:"T016",lane:"Product sprint",title:"Create a seven minute onboarding walkthrough",priority:"Core",hours:6,why:"Direct proof for Product Education, Implementation and Solutions.",steps:["Pick one narrow workflow.","Script it: audience, problem, first steps, common confusion, value, limitation.","Make a PDF, slides or recording.","Add three adoption tips.","Add one note on what you would ask the product team."],output:"A seven minute walkthrough.",looks:"A new user can follow it and see the value.",sources:["S08"],examples:["S28","S29","S30"],videos:["S10","S19"],keep:"Base claims on official learning or your own test, do not invent product capability.",
+  choice:{pros:["A PDF or slides is fast and controlled.","A recording feels more real and reusable."],cons:["Recording needs a quiet space and editing.","PDF can feel static."],good:["Pick the format you can finish this week. A finished PDF beats an unfinished video."]}},
+ {id:"T017",lane:"Voice of Customer support",title:"Write a product feedback note from the user view",priority:"Support",hours:3,why:"Keeps the user to tech team route alive without making it the only path.",steps:["Record three friction points during your sprint.","For each: issue, affected user, impact, possible cause, suggested improvement, evidence strength.","Label evidence: hands on, docs, ad pattern or assumption.","Write one feature request in neutral language."],output:"One Voice of Customer style note.",looks:"Useful product insight, not a rant.",examples:["S16"],videos:["S20","S21"],keep:"Your confusion may be onboarding friction or product design. Do not assume which without evidence."},
+ {id:"T018",lane:"Portfolio",title:"Build the minimum proof pack",priority:"Core",hours:3,why:"Your application readiness threshold.",steps:["Folder called Minimum Proof Pack.","Add the guide, explainer, case study, walkthrough, glossary and matrix.","Index which lanes each piece supports.","Mark missing items honestly."],output:"A minimum proof pack.",looks:"You can show or adapt evidence quickly.",keep:"Exploratory chats before the pack are fine, heavy applying is not."},
+ {id:"T019",lane:"Portfolio",title:"Create a simple portfolio page or PDF",priority:"Core",hours:6,why:"Makes the bridge visible in one link.",steps:["Pick the easiest format: Notion, Carrd, GitHub Pages or PDF.","Sections: about, target role family, proof pieces, product sprint, contact.","Per piece: audience, problem, what I made, what it shows.","Publish nothing confidential."],output:"A shareable portfolio.",looks:"Clean, evidence led, clear in two minutes.",examples:["S31","S05","S32"],
+  choice:{pros:["PDF is easiest.","Notion is fast.","Carrd looks polished.","GitHub Pages signals tech confidence."],cons:["PDF can feel static.","GitHub Pages can become a coding side quest."],good:["Easiest format first. Evidence matters more than platform."]}},
+ {id:"T020",lane:"Applications",title:"Update CV and LinkedIn for the role family",priority:"Core",hours:5,why:"Your profile should support several lanes without sounding vague.",steps:["Use the language matrix.","Keep the base honest: CAD Manager and point cloud specialist.","Add target wording: AEC digital adoption, workflow enablement, implementation support, technical education.","One master CV plus small variants.","Add safe proof to LinkedIn Featured."],output:"Repositioned CV and LinkedIn.",looks:"A recruiter gets the pivot in twenty seconds.",examples:["S30"],keep:"Do not imply SaaS CSM ownership you do not have, use adjacent evidence language.",
+  choice:{pros:["One master CV keeps the base consistent.","Variants target each lane."],cons:["Too many variants confuse.","Over tailoring reads as unstable."],good:["One core identity, adjust the surface."]}},
+ {id:"T021",lane:"Applications",title:"Apply in small batches and keep lanes open",priority:"Core",hours:6,why:"Small batches give evidence while preserving flexibility.",steps:["Pick five roles across two or three lanes.","Tailor the summary and proof bullets.","Record response, silence, rejection reason, what seemed missing.","Update the scorecard after each batch.","Do not rewrite your identity from one rejection."],output:"An application batch tracker.",looks:"You learn from the market without chaos.",examples:["S17"],keep:"Five roles are weak evidence. Patterns across twenty to thirty matter.",
+  choice:{pros:["Small batches protect confidence and give cleaner data.","You can test several lanes."],cons:["Feels slower than mass applying.","Early silence is not enough to change everything."],good:["Review after five, judge patterns after twenty to thirty."]}},
+ {id:"T022",lane:"Growth horizon",title:"Keep an automation and digitalisation opportunity log",priority:"Future",hours:1,why:"Senior value comes from turning repeated workflow problems into systems, training or automation.",steps:["A note called Growth Radar.","Per pain point: problem, users, workaround, possible fix, evidence, value.","Do not solve everything now.","Review monthly, star the top one or two."],output:"An opportunity log.",looks:"A calm senior idea bank.",videos:["S13"],repos:["G04"],keep:"An idea is not an opportunity until it is repeated, painful and valuable."},
+ {id:"TG1",lane:"Growth horizon",title:"Once you have standing, build one real improvement",priority:"Future",hours:10,why:"Where ownership turns into senior value. Solving one logged problem for real moves you from doing the job to shaping it.",steps:["From the Growth Radar, pick one repeated, painful, valuable problem.","Scope it small: what changes, who benefits, how to measure it.","Build the training, the process or the light automation.","Capture the before and after as a new case study."],output:"One delivered improvement and a fresh case study.",looks:"You can point to something you changed, not just maintained.",repos:["G04"],keep:"Wait until you have the standing to act. Do not take accountability for inputs you do not control.",
+  choice:{pros:["Turns the adoption story into a leadership story.","Creates your strongest portfolio piece."],cons:["Needs time and some ownership.","Can expand if not scoped small."],good:["Free first: AI assisted tools, a Power BI view, a Speckle style check. Pay only once it clearly justifies it."]}},
+ {id:"TG2",lane:"Growth horizon",title:"Add one value raising skill or certificate at a time",priority:"Future",hours:0,why:"Your own instinct, keep evolving if it raises your value, made into a habit without overload.",steps:["Each quarter, look at your ads and Growth Radar.","Name the single skill that would most raise your value next.","Learn the concept free first.","Pay only when the market clearly rewards it.","Add it as a new task when you commit."],output:"A deliberate upskilling rhythm.",looks:"You grow with the field instead of being overtaken.",keep:"One at a time. A pile of half started courses lowers value.",
+  choice:{pros:["Compounds your value over years.","Keeps you AI resistant by owning the newest judgement."],cons:["Easy to over collect courses.","Hard to measure value in advance."],good:["The test: does the market repeatedly ask for it, and does it raise what you can earn. If not, it is a hobby, log it as a side quest."]}},
+ {id:"T023",lane:"Growth horizon",title:"Track the consultancy and Hungary angle lightly",priority:"Future",hours:1,why:"The two base and own consultancy goal is a long game on the same skill stack.",steps:["Sections: services, UK clients, Hungary clients, bilingual advantage, proof needed, legal and tax questions, pricing questions.","Add observations only for now.","Use official sources for legal and tax context.","Monthly: did this month reveal a problem that could become a service?"],output:"A consultancy seed note.",looks:"The long game is visible without stealing focus.",sources:["S14"],videos:["S13"],keep:"Do not turn legal, tax or market assumptions into facts without expert or official evidence."}
+];
+const PHASEDESC={"Core foundation":"Set the workspace, the flexible identity and your ISO 19650 knowledge.","Field awareness":"Read the market through real adverts before choosing too much.","Parallel route lanes":"Compare the lanes when evidence appears.","Evidence bank":"Turn your CAD, point cloud, QA and guidance work into proof.","Core learning":"Close the vocabulary, writing and AI gaps with practical outputs.","Business analysis support":"Keep the user needs to tech team skill alive.","Product sprint":"Learn one product well enough to explain onboarding friction.","Voice of Customer support":"Turn user confusion into useful product feedback.","Portfolio":"Package the proof so roles understand your pivot.","Applications":"Test the market in small, calm batches.","Growth horizon":"Where ownership, automation, innovation and the long game live."};
+const BADGE={"Core foundation":"Groundwork","Field awareness":"Scout","Parallel route lanes":"Navigator","Evidence bank":"Proof builder","Core learning":"Scholar","Business analysis support":"Translator","Product sprint":"Product hand","Voice of Customer support":"Listener","Portfolio":"Curator","Applications":"In the arena","Growth horizon":"Horizon"};
+const CHAPTERS=[
+ {name:"Setting Out",seal:"Traveler's Pack",story:"Every journey starts at the door. Pack your bag and name where you are headed.",tasks:["T001","T002"]},
+ {name:"Reading the Land",seal:"Map of the Land",story:"Before you walk, read the land. The job adverts are your map of the country ahead.",tasks:["T003","T004","T005","T006"]},
+ {name:"Old Lore and Your Pack",seal:"Tome of Lore",story:"Learn the old lore every guild respects, then take stock of what you already carry.",tasks:["TC1","T007"]},
+ {name:"Craft of the Scribe",seal:"Scribe's Quill",story:"Learn to write plainly, then craft the proofs that show what you can do.",tasks:["T011","T012","T008","T009","T010"]},
+ {name:"The Common Tongue",seal:"Silver Tongue",story:"Pick up the languages your future allies speak, so you are understood in any hall.",tasks:["T013","TL1","TL2","TL3","T014"]},
+ {name:"Into the Workshop",seal:"Maker's Mark",story:"Take a tool in hand, learn its ways, and note where travellers stumble.",tasks:["T015","T016","T017"]},
+ {name:"The Showing",seal:"Banner Raised",story:"Gather your work and lay it out so any passer by sees your worth at a glance.",tasks:["T018","T019","T020"]},
+ {name:"The Road Goes On",seal:"Open Road",story:"Set out to meet the world, and keep growing as you go.",tasks:["T021","T022","TG1","TG2","T023"]}
+];
+const PROJECTS=[
+ {title:"Onboarding teardown",blurb:"Pick a tool you know. Write a one page note: where new users struggle and how you would fix the first run.",why:"Pure enablement gold, shows product thinking."},
+ {title:"Five email onboarding sequence",blurb:"Draft the five emails a new user of a tool should get in week one, each with one goal.",why:"Implementation and customer success proof."},
+ {title:"Mock quarterly business review",blurb:"Build a short QBR deck for a fictional AEC client: usage, value, risks, next goals.",why:"Speaks the customer success ritual fluently."},
+ {title:"Feedback to feature brief",blurb:"Take five user complaints, group them, and write one prioritised product feedback brief.",why:"Voice of Customer and solutions evidence."},
+ {title:"Bilingual standard explainer",blurb:"Explain one ISO 19650 concept on one page, in English and in Hungarian.",why:"Your rare bilingual edge, in writing."},
+ {title:"Three article help centre",blurb:"Write three short help articles for one tool, one each as tutorial, how to and reference.",why:"Diataxis in practice, a portfolio centrepiece."}
+];
+const SIDEQUESTS=[
+ {title:"Bilingual concept explainers",edge:"Rare for EU AEC vendors. Short explainers in English and Hungarian build visibility and portfolio at once.",starter:"Pick one concept, write one page in each language.",caveat:"One a month is plenty."},
+ {title:"Illustrated technical diagrams",edge:"You already illustrate. Enablement people who can draw a workflow clearly are rare and valued.",starter:"Take one workflow and make one clean diagram in Excalidraw or by hand.",url:"https://excalidraw.com/",caveat:"Clarity over polish."},
+ {title:"Open point cloud dataset write up",edge:"Keeps your core sharp and gives a public artifact of your domain depth.",starter:"Find an open lidar dataset, process a small part, write a short method note.",caveat:"Use openly licensed data, confirm the licence."},
+ {title:"Data storytelling with Power BI",edge:"You built a Power BI tracker. Turning data into a clear story is a strong adoption edge.",starter:"Take one dataset, build a small dashboard with a one line narrative.",url:"https://learn.microsoft.com/en-us/power-bi/",caveat:"Story first, charts second."},
+ {title:"Speckle QA automation, read only first",edge:"Closest to your QA strength, a real digitalisation credential later.",starter:"Read the Speckle Automate QA workshop README and extract the checking logic.",url:"https://github.com/specklesystems/speckle-automate-qa_qc_workshop",caveat:"Reading first, code later only if it pulls you."}
+];
+const RADAR=[
+ {t:"GitHub Explore",u:"https://github.com/explore",conf:"stable",what:"GitHub's own discovery feed.",why:"a low effort way to find relevant projects."},
+ {t:"Topic: BIM",u:"https://github.com/topics/bim",conf:"stable",what:"All repos tagged BIM.",why:"see what the open BIM world is building."},
+ {t:"Topic: AEC",u:"https://github.com/topics/aec",conf:"stable",what:"Architecture, engineering, construction repos.",why:"spot tools and ideas near your field."},
+ {t:"Topic: point cloud",u:"https://github.com/topics/point-cloud",conf:"stable",what:"Point cloud projects.",why:"closest to your core skill."},
+ {t:"Speckle Systems",u:"https://github.com/specklesystems",conf:"verified",what:"Open AEC data hub and connectors.",why:"the leading open data platform in AEC."},
+ {t:"Speckle QA QC workshop",u:"https://github.com/specklesystems/speckle-automate-qa_qc_workshop",conf:"verified",what:"Automated QA checks with Python.",why:"directly maps to your QA strength."},
+ {t:"IfcOpenShell",u:"https://github.com/IfcOpenShell/IfcOpenShell",conf:"stable",what:"Open IFC toolkit.",why:"the backbone of open BIM data."},
+ {t:"That Open",u:"https://github.com/ThatOpen",conf:"stable",what:"Web based BIM libraries.",why:"where browser based BIM is heading."},
+ {t:"Ladybug Tools",u:"https://github.com/ladybug-tools",conf:"stable",what:"Environmental design tools.",why:"if sustainability pulls you."},
+ {t:"buildingSMART samples",u:"https://github.com/buildingSMART/Sample-Test-Files",conf:"stable",what:"Official IFC sample files.",why:"raw material for experiments."},
+ {t:"Autodesk Platform Services",u:"https://github.com/autodesk-platform-services",conf:"stable",what:"Official Autodesk dev samples.",why:"see how the big ecosystem exposes data."}
+];
+
+let state={steps:{},notes:{},collapsed:{},filter:'all',journal:'',streak:0,lastDate:''};
+function esc(s){return(s||'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]))}
+function load(){try{const r=localStorage.getItem(KEY);if(r)state=Object.assign(state,JSON.parse(r));}catch(e){}document.getElementById('journal').value=state.journal||'';setStatus(localStorage.getItem(KEY)?'Loaded saved progress':'Ready')}
+function save(){try{localStorage.setItem(KEY,JSON.stringify(state));setStatus('Saved '+new Date().toLocaleTimeString([],{hour:'2-digit',minute:'2-digit'}))}catch(e){setStatus('Save failed: '+e.message,true)}}
+function setStatus(m,err){const el=document.getElementById('status');el.textContent=m;el.className='status'+(err?' err':'')}
+function touch(){const t=new Date(),today=t.toISOString().slice(0,10),y=new Date(t-864e5).toISOString().slice(0,10);if(state.lastDate===today)return;if(state.lastDate===y)state.streak=(state.streak||0)+1;else state.streak=1;state.lastDate=today}
+function sd(id,i){return !!(state.steps[id]&&state.steps[id][i])}
+function sc(t){return t.steps.length}
+function sdone(t){return t.steps.filter((_,i)=>sd(t.id,i)).length}
+function done(t){return sc(t)>0&&sdone(t)===sc(t)}
+function spct(t){return sc(t)?Math.round(sdone(t)/sc(t)*100):0}
+function toggleTask(id){const t=TASKS.find(x=>x.id===id);if(!state.steps[id])state.steps[id]={};const tg=!done(t);t.steps.forEach((_,i)=>state.steps[id][i]=tg);touch();save();render()}
+function toggleStep(id,i){if(!state.steps[id])state.steps[id]={};state.steps[id][i]=!state.steps[id][i];touch();save();render()}
+function note(id,v){state.notes[id]=v;save()}
+function setFilter(f){state.filter=f;save();render()}
+function collapseAll(){CHAPTERS.forEach(c=>state.collapsed[c.name]=true);save();render()}
+function expandAll(){state.collapsed={};save();render()}
+function shouldShow(t){if(state.filter==='core')return t.priority==='Core';if(state.filter==='open')return !done(t);if(state.filter==='learn')return !!LEARN[t.id];return true}
+function ul(a){return '<ul>'+a.map(x=>`<li>${esc(x)}</li>`).join('')+'</ul>'}
+function confTag(id){const c=(SOURCES[id]||{}).conf;return c?`<span class="conf ${c}">${c}</span>`:''}
+function srcLinks(ids){if(!ids||!ids.length)return'';return'<div class="linklist">'+ids.map(id=>{const s=SOURCES[id];if(!s)return'';return`<div class="srcitem"><span class="t"><a href="${s.u}" target="_blank" rel="noopener">${esc(s.t)} ↗</a>${confTag(id)}</span>${esc(s.what)}<br><span class="faint">Find it: ${esc(s.route)}</span></div>`}).join('')+'</div>'}
+function repoLinks(ids){if(!ids||!ids.length)return'';return'<div class="linklist">'+ids.map(id=>{const s=SOURCES[id]||RADAR.find(r=>r.t.includes('Speckle')&&id==='G04')||{};const m={G01:RADAR[10],G03:RADAR[4],G04:RADAR[5]}[id];const r=m||{};return`<div class="srcitem"><span class="t"><a href="${r.u}" target="_blank" rel="noopener">${esc(r.t)} ↗</a><span class="conf ${r.conf}">${r.conf}</span></span>${esc(r.what)}<br><span class="faint">${esc(r.why)}</span></div>`}).join('')+'</div>'}
+function watchLinks(ids){if(!ids||!ids.length)return'';return ids.map(id=>{const s=SOURCES[id],w=WATCH[id]||{};return`<div class="watchitem"><span class="t"><a href="${s.u}" target="_blank" rel="noopener">${esc(s.t)} ↗</a>${confTag(id)}</span><br>Watch: ${esc(w.watch||s.route)}<br>Why here: ${esc(w.why||'supports this task')}</div>`}).join('')}
+function cbox(label,inner,cls){return `<details class="cbox ${cls||''}"><summary>${esc(label)}</summary><div class="cbody">${inner}</div></details>`}
+function learnBlocks(id){const L=LEARN[id];if(!L)return'';let q='<div class="quiz">'+L.quiz.map(([qq,aa])=>`<details><summary>${esc(qq)}</summary><div class="ans">${esc(aa)}</div></details>`).join('')+'</div>';return cbox('Key concepts, learn this',`<div class="teach">${L.teach}</div>`,'learnbar')+cbox('Knowledge check, reveal the answers',q,'quizbar')}
+
+function render(){
+  const total=TASKS.length,dn=TASKS.filter(done).length;
+  const core=TASKS.filter(t=>t.priority==='Core'),cdn=core.filter(done).length;
+  const stepTot=TASKS.reduce((a,t)=>a+sc(t),0),stepDn=TASKS.reduce((a,t)=>a+sdone(t),0);
+  const totalH=TASKS.reduce((a,t)=>a+t.hours,0),remH=TASKS.filter(t=>!done(t)).reduce((a,t)=>a+t.hours,0);
+  const pct=Math.round(dn/total*100),cpct=Math.round(cdn/core.length*100),spc=Math.round(stepDn/stepTot*100);
+  const byId=id=>TASKS.find(t=>t.id===id);
+  const chapters=CHAPTERS;
+  const phasesDone=chapters.filter(c=>c.tasks.every(id=>done(byId(id)))).length;
+  set('mTasks',pct+'%');set('mCore',cpct+'%');set('mSteps',spc+'%');set('mHours',Math.round(remH)+'h');
+  bar('mTasksBar',pct);bar('mCoreBar',cpct);bar('mStepsBar',spc);bar('mHoursBar',Math.round((1-remH/totalH)*100));
+  set('tbPct',pct+'%');set('tbPhases',phasesDone+' / '+chapters.length);set('tbHours',Math.round(remH)+'h');set('tbWeeks','~'+Math.ceil(remH/RATE)+' wks');
+  set('stickyPct',pct+'%');document.getElementById('stickyFill').style.width=pct+'%';
+  document.getElementById('hoursNote').textContent='About '+Math.round(totalH)+' focused hours of travel in all. A quest is done when its deeds are all ticked. The weeks are focused effort, the calendar road runs longer.';
+  let mo=`<span class="streakpill">Days on the road: ${state.streak||0}</span><span>Seals earned ${phasesDone} / ${chapters.length}:</span>`;
+  mo+=chapters.map(c=>{const cdone=c.tasks.every(id=>done(byId(id)));return `<span class="badge ${cdone?'':'locked'}">${esc(c.seal)}</span>`}).join('');
+  document.getElementById('momentum').innerHTML=mo;
+
+  const order=TASKS.filter(t=>!done(t)),oneNext=order.find(t=>t.priority==='Core')||order[0];
+  const gb=document.getElementById('guidebox');
+  gb.innerHTML=oneNext?`<span class="eyebrow">Your current quest</span><div class="now">${esc(oneNext.title)}</div><div class="why">${esc(oneNext.why)}</div><button class="jump" onclick="jumpTo('${oneNext.id}')">Set out</button>`:`<span class="eyebrow">Your current quest</span><div class="now">Every chapter is complete. The road is yours.</div><div class="why">Time to talk about what comes after the journey.</div>`;
+  const next=order.filter(t=>t.priority==='Core').slice(0,3);
+  document.getElementById('next').innerHTML=next.length?next.map((t,i)=>`<div class="nextitem"><span class="idx">${i+1}</span><div><div class="t">${esc(t.title)}</div><div class="w">${esc(t.why)}</div></div></div>`).join(''):'<p class="small">Core path complete. Look at the growth horizon.</p>';
+
+  const root=document.getElementById('phases');root.innerHTML='';
+  chapters.forEach((c,pi)=>{
+    const p=c.name;
+    const all=c.tasks.map(byId),items=all.filter(shouldShow);if(!items.length)return;
+    const tot=all.length,d=all.filter(done).length,complete=d===tot;
+    const sec=document.createElement('div');sec.className='phase'+(state.collapsed[p]?' collapsed':'')+(complete?' complete':'');sec.id='phase-'+pi;
+    let body='';
+    items.forEach(t=>{
+      const open=next.some(n=>n.id===t.id);
+      let coach='';
+      coach+=learnBlocks(t.id);
+      let looksInner=`<p>${esc(t.looks)}</p>`+(t.examples&&t.examples.length?`<div class="sub">Examples to benchmark against</div>${srcLinks(t.examples)}`:'');
+      coach+=cbox('What good looks like, with examples',looksInner,'sagebar');
+      coach+=cbox('Proof it creates',`<p>${esc(t.output)}</p>`);
+      if(t.choice){coach+=cbox('Decision support: pros, watch outs, good to know',`<div class="sub">Pros</div>${ul(t.choice.pros)}<div class="sub">Watch outs</div>${ul(t.choice.cons)}<div class="sub">Good to know</div>${ul(t.choice.good)}`,'slatebar');}
+      if(t.productOptions){let pg='<div class="prodgrid">'+t.productOptions.map(pr=>`<div class="prodcard"><h3>${esc(pr.name)}</h3><p class="small"><strong>Good for:</strong> ${esc(pr.good_for)}</p><div class="sub">Pros</div>${ul(pr.pros)}<div class="sub">Cons</div>${ul(pr.cons)}<div class="sub">Hidden things</div>${ul(pr.hidden)}<p class="small"><strong>Choose if:</strong> ${esc(pr.choose_if)}</p>${srcLinks(pr.sources)}</div>`).join('')+'</div>';coach+=cbox('Product ecosystem decision guide',pg,'slatebar');}
+      if(t.videos&&t.videos.length)coach+=cbox('Watch companion, what and why',watchLinks(t.videos),'slatebar');
+      if(t.repos&&t.repos.length)coach+=cbox('Open source to explore later',repoLinks(t.repos));
+      if(t.sources&&t.sources.length)coach+=cbox('Sources and how to find the material',srcLinks(t.sources));
+      const keep=t.keep?`<p class="small faint" style="margin-top:12px">Keep in mind: ${esc(t.keep)}</p>`:'';
+      body+=`<details class="task${done(t)?' done':''}" id="${t.id}" ${open?'open':''}>
+        <summary class="tasksum"><span class="tickwrap"><input type="checkbox" class="tick" ${done(t)?'checked':''} onclick="event.stopPropagation()" onchange="toggleTask('${t.id}')" aria-label="Complete task"></span>
+        <span class="tasktop"><span class="tasktitle">${esc(t.title)}</span><span class="taskwhy">${esc(t.why)}</span>
+        <span class="pillrow"><span class="pill ${t.priority}">${t.priority}</span><span class="pill">${t.hours}h</span>${LEARN[t.id]?'<span class="pill learn">lesson + quiz</span>':''}<span class="opener"></span></span>
+        <span class="taskprog"><span class="mini"><div style="width:${spct(t)}%"></div></span><span class="sc">${sdone(t)} / ${sc(t)} steps</span></span></span></summary>
+        <div class="taskbody">
+          <div class="doblock"><div class="blocklabel">Do this</div><div class="steps">${t.steps.map((st,i)=>`<label class="step"><input type="checkbox" ${sd(t.id,i)?'checked':''} onchange="toggleStep('${t.id}',${i})"><span>${esc(st)}</span></label>`).join('')}</div></div>
+          <div class="coachlist">${coach}</div>${keep}
+          <textarea class="notes" placeholder="Your notes, links, blockers, decisions" oninput="note('${t.id}',this.value)">${esc(state.notes[t.id]||'')}</textarea>
+        </div></details>`;
+    });
+    sec.innerHTML=`<div class="phasehead" onclick="toggleCollapse('${p}',event)"><div class="station">${complete?'✓':String(pi+1).padStart(2,'0')}</div><div class="meta"><div class="stn-label">Chapter ${String(pi+1).padStart(2,'0')} · ${esc(c.seal)}</div><h2>${esc(p)}</h2><div class="desc">${esc(c.story)}</div></div><div class="count">${d}/${tot}<br><span class="chev">▼</span></div></div><div class="phasebody">${body}</div>`;
+    root.appendChild(sec);
+  });
+  document.getElementById('phaseNav').innerHTML=chapters.map((c,i)=>{const all=c.tasks.map(byId),tot=all.length,d=all.filter(done).length;return `<button class="navpill" data-target="phase-${i}" onclick="jumpPhase('phase-${i}')"><span class="stn">${String(i+1).padStart(2,'0')}</span>${esc(c.name)} · ${d}/${tot}</button>`}).join('');
+  document.getElementById('channels').innerHTML=Object.keys(WATCH).map(id=>{const s=SOURCES[id],w=WATCH[id];return`<div class="shelfcard"><details><summary>${esc(s.t.replace(' YouTube',''))}${confTag(id)}</summary><div class="body"><a href="${s.u}" target="_blank" rel="noopener">Open ↗</a><p class="small"><strong>Watch:</strong> ${esc(w.watch)}</p><p class="small"><strong>Why:</strong> ${esc(w.why)}</p></div></details></div>`}).join('');
+  document.getElementById('sources').innerHTML=Object.keys(SOURCES).map(id=>{const s=SOURCES[id];return`<div class="shelfcard"><details><summary><span>${id} · ${esc(s.t)}</span>${confTag(id)}</summary><div class="body"><a href="${s.u}" target="_blank" rel="noopener">Open ↗</a><p class="small">${esc(s.what)}</p><p class="small"><strong>Find it:</strong> ${esc(s.route)}</p></div></details></div>`}).join('');
+  document.getElementById('radar').innerHTML=RADAR.map(r=>`<div class="shelfcard"><details><summary><span>${esc(r.t)}</span><span class="conf ${r.conf}">${r.conf}</span></summary><div class="body"><a href="${r.u}" target="_blank" rel="noopener">Open ↗</a><p class="small">${esc(r.what)}</p><p class="small"><strong>Why watch:</strong> ${esc(r.why)}</p></div></details></div>`).join('');
+  document.getElementById('projects').innerHTML=PROJECTS.map(p=>`<div class="sidecard"><details><summary>${esc(p.title)}</summary><div class="body"><p class="small">${esc(p.blurb)}</p><p class="small"><strong>Why it helps:</strong> ${esc(p.why)}</p></div></details></div>`).join('');
+  document.getElementById('sidequests').innerHTML=SIDEQUESTS.map(q=>`<div class="sidecard"><details><summary>${esc(q.title)}</summary><div class="body">${q.url?`<a href="${q.url}" target="_blank" rel="noopener">Open ↗</a>`:''}<p class="small"><strong>Edge:</strong> ${esc(q.edge)}</p><p class="small"><strong>Start:</strong> ${esc(q.starter)}</p><p class="small"><strong>Caveat:</strong> ${esc(q.caveat)}</p></div></details></div>`).join('');
+}
+function set(id,v){document.getElementById(id).textContent=v}
+function bar(id,v){document.getElementById(id).style.width=Math.max(0,Math.min(100,v))+'%'}
+function toggleCollapse(p,e){if(e&&e.target&&(e.target.closest('.task')||e.target.closest('a')))return;state.collapsed[p]=!state.collapsed[p];save();render()}
+function jumpPhase(id){const el=document.getElementById(id);if(el)el.scrollIntoView({behavior:'smooth',block:'start'})}
+function jumpTo(id){const ch=CHAPTERS.find(c=>c.tasks.includes(id));if(ch)state.collapsed[ch.name]=false;save();render();setTimeout(()=>{const el=document.getElementById(id);if(el){el.open=true;el.scrollIntoView({behavior:'smooth',block:'center'})}},60)}
+function exportData(){const blob=new Blob([JSON.stringify({exportedAt:new Date().toISOString(),state},null,2)],{type:'application/json'});const u=URL.createObjectURL(blob);const a=document.createElement('a');a.href=u;a.download='aec_path_progress_'+new Date().toISOString().slice(0,10)+'.json';a.click();URL.revokeObjectURL(u)}
+function resetData(){if(!confirm('Reset all progress and notes?'))return;state={steps:{},notes:{},collapsed:{},filter:'all',journal:'',streak:0,lastDate:''};try{localStorage.removeItem(KEY)}catch(e){}document.getElementById('journal').value='';render();setStatus('Reset complete')}
+const sticky=document.getElementById('sticky'),topBtn=document.getElementById('topBtn');
+addEventListener('scroll',()=>{const y=scrollY;sticky.classList.toggle('show',y>320);topBtn.classList.toggle('show',y>600);let active=null;document.querySelectorAll('.phase').forEach(ph=>{if(ph.getBoundingClientRect().top<160)active=ph.id});document.querySelectorAll('.navpill').forEach(n=>n.classList.toggle('active',n.dataset.target===active))},{passive:true});
+load();render();
+</script>
+</body>
+</html>
