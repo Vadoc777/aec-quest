@@ -2,22 +2,8 @@
 *** Begin Patch
 *** Update File: index.html
 @@
--  <div class="card toolbar">
-+  <div class="card toolbar">
-     <span class="small" style="font-family:var(--mono)">Filter:</span>
-@@
--  </div>
--
--  <div id="phases"></div>
-+  </div>
-+
-+  <div class="card">
-+    <h2>Quest map</h2>
-+    <p class="small" style="margin:.3rem 0 8px">Tap a chapter to jump — your roadmap in one view.</p>
-+    <div style="max-width:640px;margin:0 auto">
-+      <img src="/quest-map.svg" alt="Quest map" style="width:100%;height:auto;border:2px solid rgba(255,255,255,.03);border-radius:8px"/>
-+    </div>
-+  </div>
-+
-+  <div id="phases"></div>
+-      <img src="/quest-map.svg" alt="Quest map" style="width:100%;height:auto;border:2px solid rgba(255,255,255,.03);border-radius:8px"/>
++      <object id="questMapObj" data="/quest-map.svg" type="image/svg+xml" style="width:100%;height:auto;border:2px solid rgba(255,255,255,.03);border-radius:8px" aria-label="Quest map"></object>
+       </div>
+     </div>
 *** End Patch
