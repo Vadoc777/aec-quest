@@ -2,8 +2,15 @@
 *** Begin Patch
 *** Update File: index.html
 @@
--      <img src="/quest-map.svg" alt="Quest map" style="width:100%;height:auto;border:2px solid rgba(255,255,255,.03);border-radius:8px"/>
-+      <object id="questMapObj" data="/quest-map.svg" type="image/svg+xml" style="width:100%;height:auto;border:2px solid rgba(255,255,255,.03);border-radius:8px" aria-label="Quest map"></object>
-       </div>
-     </div>
+   <script src="/lib/marked.min.js"></script>
+   <script src="/lib/DOMPurify.min.js"></script>
+   <script>
+@@
+   </script>
++  <script src="/map-hotspots.js"></script>
+   <script>
+     // Additional page initialization after DOM loads
+     load();
+     render();
+   </script>
 *** End Patch
